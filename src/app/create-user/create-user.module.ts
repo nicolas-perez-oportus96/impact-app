@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HomePage } from './home.page';
+import { CreateUserPage } from './create-user.page';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -13,10 +13,10 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     IonicModule,
     RouterModule.forChild([{
-      path: '', 
-      component: HomePage
+      path:'',
+      component: CreateUserPage
     }])
   ],
-  declarations: [HomePage]
+  declarations: [CreateUserPage]
 })
-export class HomePageModule {}
+export class CreateUserPageModule {}

@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+      <ion-title>{{isUpdate ? 'Modificar datos de' : 'Registrar nuevo'}} usuario</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="flex">
+          <ion-icon name="key-outline" size="large"></ion-icon>
+          <h3>Informacion de acceso</h3>
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Correo Electronico</ion-label>
+          <ion-input [(ngModel)]=data.correo name="correo" placeholder="correo@mail.com"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input [(ngModel)]=data.password name="password" placeholder="max 30 caracteres"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="flex">
+          <ion-icon name="person-outline" size="large"></ion-icon>
+          <h3>Datos del usuario</h3>
+        </ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Nombre</ion-label>
+          <ion-input [(ngModel)]=data.nombre name="nombre" placeholder="Juan"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Apellido Paterno</ion-label>
+          <ion-input [(ngModel)]=data.apellido_paterno name="apellido_paterno" placeholder="Perez"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Apellido Materno</ion-label>
+          <ion-input [(ngModel)]=data.apellido_materno name="apellido_materno" placeholder="Cotapos"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Telefono</ion-label>
+          <ion-input [(ngModel)]=data.telefono name="telefono" placeholder="912345678"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button type="submit" class="button" size="large" expand="full">
+      <ion-icon name="person-add-outline"></ion-icon>
+      {{isUpdate ? 'Modificar': 'Registrar'}} Usuario
+    </ion-button>
+  </form>
+
+</ion-content>

@@ -1,0 +1,16 @@
+.flex{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    h3{
+        margin-left: 10px;
+    }
+}
+
+.button {
+    font-size: 15px;
+    ion-icon{
+        margin-right: 10px;
+    }
+}

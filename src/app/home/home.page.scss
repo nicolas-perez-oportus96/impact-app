@@ -1,27 +1,21 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.avatar{
+    background-color: blueviolet;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.subtext {
+    font-size: 80%;
+    margin-top: 0;
+    color: #8b979f;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.title{
+    font-weight: 600;
+    font-size: 16px;
 }
